@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, ScrollView, KeyboardAvoidingView, Platform, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import logoImg from '../../assets/logo.png';
 import InputAuth from '../../components/InputAuth';
