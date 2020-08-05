@@ -1,14 +1,15 @@
 import React from 'react';
 import { Image, View, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import logoImg from '../../assets/logo.png';
 import InputAuth from '../../components/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth';
-import { Container, Title, ForgotPassword, ForgotPasswordText, CreateAccountButton, CreateAccountButtonText } from './styles';
+import logoImg from '../../assets/logo.png';
+import { Container, Title, BackToSignIn, BackToSignInText } from './styles';
 import { useNavigation } from '@react-navigation/native';
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const navigation = useNavigation();
+
   return (
     <>
       <KeyboardAvoidingView
@@ -24,26 +25,24 @@ const SignIn: React.FC = () => {
             <Image source={logoImg} />
 
             <View>
-              <Title>Faça seu logon</Title>
+              <Title>Crie sua conta</Title>
             </View>
 
+            <InputAuth name="name" icon="user" placeholder="Nome" />
             <InputAuth name="email" icon="mail" placeholder="E-mail" />
             <InputAuth name="password" icon="lock" placeholder="Senha" />
 
             <ButtonAuth onPress={() => { console.log('Foi') }}>Entrar</ButtonAuth>
 
-            <ForgotPassword onPress={() => { }}>
-              <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
-            </ForgotPassword>
           </Container>
         </ScrollView>
-        <CreateAccountButton onPress={() => { navigation.navigate('SignUp') }}>
-          <Icon name="log-in" size={20} color="#ff9000" />
-          <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
-        </CreateAccountButton>
+        <BackToSignIn onPress={() => { navigation.navigate('SignIn') }}>
+          <Icon name="arrow-left" size={20} color="#fff" />
+          <BackToSignInText>Voltar para logon</BackToSignInText>
+        </BackToSignIn>
       </KeyboardAvoidingView>
     </>
   );
 }
 
-export default SignIn;
+export default SignUp;
