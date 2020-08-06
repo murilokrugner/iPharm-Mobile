@@ -3,7 +3,7 @@ import { Image, View, ScrollView, KeyboardAvoidingView, Platform } from 'react-n
 import Icon from 'react-native-vector-icons/Feather';
 import InputAuth from '../../components/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth';
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/logo2.png';
 import { Container, Title, BackToSignIn, BackToSignInText } from './styles';
 import { useNavigation } from '@react-navigation/native';
 
@@ -22,7 +22,7 @@ const SignUp: React.FC = () => {
           contentContainerStyle={{ flex: 1 }}
         >
           <Container>
-            <Image source={logoImg} />
+          <Image source={logoImg} style={{width: 170, height: 170}}/>
 
             <View>
               <Title>Crie sua conta</Title>
@@ -37,7 +37,7 @@ const SignUp: React.FC = () => {
           </Container>
         </ScrollView>
         <BackToSignIn onPress={() => { navigation.navigate('SignIn') }}>
-          <Icon name="arrow-left" size={20} color="#fff" />
+          <Icon name="arrow-left" size={20} color="#003F75" />
           <BackToSignInText>Voltar para logon</BackToSignInText>
         </BackToSignIn>
       </KeyboardAvoidingView>

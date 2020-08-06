@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ScrollView, KeyboardAvoidingView, Platform, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/logo2.png';
 import InputAuth from '../../components/InputAuth';
 import ButtonAuth from '../../components/ButtonAuth';
 import { Container, Title, ForgotPassword, ForgotPasswordText, CreateAccountButton, CreateAccountButtonText } from './styles';
@@ -21,7 +21,7 @@ const SignIn: React.FC = () => {
           contentContainerStyle={{ flex: 1 }}
         >
           <Container>
-            <Image source={logoImg} />
+            <Image source={logoImg} style={{width: 170, height: 170}}/>
 
             <View>
               <Title>Faça seu logon</Title>
@@ -38,7 +38,7 @@ const SignIn: React.FC = () => {
           </Container>
         </ScrollView>
         <CreateAccountButton onPress={() => { navigation.navigate('SignUp') }}>
-          <Icon name="log-in" size={20} color="#ff9000" />
+          <Icon name="log-in" size={20} color="#003F75" />
           <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
         </CreateAccountButton>
       </KeyboardAvoidingView>
