@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  flex: 1;
+
 `;
 
 export const BoxSearch = styled.View`
@@ -26,3 +26,15 @@ export const ContainsSearch = styled.View`
 
 export const InputSearch = styled.TextInput`
 `;
+
+export const BoxFilters = styled.View`
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 0.18px;
+  border-radius: 50px;
+  height: 40px;
+  flex-direction: row;
+  width: 150px;
+`;
+
+export const Filters = styled.Text``;
